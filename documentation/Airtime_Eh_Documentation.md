@@ -42,7 +42,7 @@ You will then be in an interactive installation mode. Any installation issues yo
 
 To install *Airtime\_Eh's* Wordpress plugin, download this package (https://github.com/CKGI/airtime-wordpress-plugin/archive/master.zip). Login as an administrator to your Wordpress site. Go to *Plugins*. On the screen that brings up, click on the *Upload Plugin* link, and follow the instructions.
 
-Once it is uploaded, you may activate the plugin. See Section 4, “Configuring Wordpress,” for more information on configuring the plug post-activation.
+Once it is uploaded, you may activate the plugin. See Section 4, “Configuring Wordpress," for more information on configuring the plug post-activation.
 
 3: Using *Airtime\_Eh*
 ======================
@@ -54,17 +54,17 @@ Once it is uploaded, you may activate the plugin. See Section 4, “Configuring 
 
 Entering CRTC content category numbers is quite simple. Airtime provides the ability to edit track metadata in the *Library* section of Airtime. To access it, login to your *Airtime\_Eh* installation, go to the *Library* pane pictured below.
 
-<img src="https://github.com/CKGI/airtime-wordpress-plugin/documentation/media/image1.jpg" width="624" height="479" />
+<img src="https://raw.githubusercontent.com/CKGI/airtime-wordpress-plugin/master/documentation/media/image1.jpg" width="624" height="479" />
 
 Next, left click on the track whose metadata you wish to edit. A menu will come up. Click on *Edit Metadata*.
 
-<img src="https://github.com/CKGI/airtime-wordpress-plugin/documentation/media/image2.jpg" width="624" height="479" />
+<img src="https://raw.githubusercontent.com/CKGI/airtime-wordpress-plugin/master/documentation/media/image2.jpg" width="624" height="479" />
 
 In the fields which come up, the last will read *CRTC*. In that field, enter the CRTC content category or categories of the track, in accordance with CRTC regulations (http://www.crtc.gc.ca/eng/archive/2000/PB2000-14.htm).
 
 Multiple content categories should be entered with a space between them, e.g. 1 11 13.
 
-<img src="https://github.com/CKGI/airtime-wordpress-plugin/documentation/media/image3.jpg" width="624" height="479" />
+<img src="https://raw.githubusercontent.com/CKGI/airtime-wordpress-plugin/master/documentation/media/image3.jpg" width="624" height="479" />
 
 When you have entered the content categories, simply click the *Save* button, and the content categories will be stored.
 
@@ -81,11 +81,11 @@ Please note that although *Airtime\_Eh* only provides a Wordpress plugin to inte
 
 To enable the show history feed, login to your *Airtime\_Eh* installation. Go to *Preferences*.
 
-<img src="https://github.com/CKGI/airtime-wordpress-plugin/documentation/media/image4.jpg" width="624" height="479" />
+<img src="https://raw.githubusercontent.com/CKGI/airtime-wordpress-plugin/master/documentation/media/image4.jpg" width="624" height="479" />
 
 In *Preferences*, go to *Public Airtime API*. Click on *Enabled*. Then go to the bottom of the screen and click *Save.*
 
-<img src="https://github.com/CKGI/airtime-wordpress-plugin/documentation/media/image5.jpg" width="624" height="479" />
+<img src="https://raw.githubusercontent.com/CKGI/airtime-wordpress-plugin/master/documentation/media/image5.jpg" width="624" height="479" />
 
 Click *Save*. Now your station provides the usual gamut of publicly available Airtime feeds, including the show history feed.
 
@@ -108,23 +108,23 @@ Please note that some of these fields are optional. The only data guaranteed to 
 
 *Airtime\_Eh* adds a new feature to the editing fields in Airtime's *Library* section, titled *Create Compendium*.
 
-<img src="https://github.com/CKGI/airtime-wordpress-plugin/documentation/media/image6.jpg" width="624" height="479" />
+<img src="https://raw.githubusercontent.com/CKGI/airtime-wordpress-plugin/master/documentation/media/image6.jpg" width="624" height="479" />
 
 A compendium file is one where several tracks have been provided to your station as one single file. The purpose of *Create Compendium* is to set **cue points** in the metadata, so Airtime treats each cue point as the beginning and end of a given track. A cue point is simply a timestamp of the beginning and end of a track.
 
 When you click *Create Compendium*, a window will pop up.
 
-<img src="https://github.com/CKGI/airtime-wordpress-plugin/documentation/media/image7.jpg" width="624" height="479" />
+<img src="https://raw.githubusercontent.com/CKGI/airtime-wordpress-plugin/master/documentation/media/image7.jpg" width="624" height="479" />
 
 In this window, you will see *Track 1*, and the buttons *Add Track* and *Save Compendium*. *Track 1* has a clickable title. Click it to show or hide the metadata fields for that entry.
 
-<img src="https://github.com/CKGI/airtime-wordpress-plugin/documentation/media/image8.jpg" width="624" height="479" />
+<img src="https://raw.githubusercontent.com/CKGI/airtime-wordpress-plugin/master/documentation/media/image8.jpg" width="624" height="479" />
 
 As you can see, each track has the usual metadata fields, but also has a *Starts* and *Ends* field, which represent the starting and ending cue points for this track. These fields expect a numeric entry, in the form of Minute.Seconds (e.g. *3.04* would be three minutes and four seconds). It is important to enter two digits in the second part of the field. If you entered *3.4*, for example, you would be telling the compendium to set a cue point at three minutes and forty seconds, not three minutes and four seconds.
 
 To add further tracks in the compendium, simply click on *Add Track*. Another track entry will appear.
 
-<img src="https://github.com/CKGI/airtime-wordpress-plugin/documentation/media/image9.jpg" width="624" height="479" />
+<img src="https://raw.githubusercontent.com/CKGI/airtime-wordpress-plugin/master/documentation/media/image9.jpg" width="624" height="479" />
 
 If you wish to remove a track from the compendium, simply click the *Cancel* button in that track's listing. The offending track will be removed, and the rest will be appropriately re-numbered.
 
@@ -136,7 +136,7 @@ When you are finished with your tracks, click *Save Compendium*. The compendium 
 
 Compendiums are an advanced Airtime feature. There are a few tricks to using them properly.
 
-#### 3.3.3.1: Using a Media Player
+#### 3.3.1.1: Using a Media Player
 
 Airtime's built-in media player is quite limited. As such, it was not feasible to put a media player in the compendium functionality. As such, we advise using a separate media player (i.e. Winamp, VLC, etc.) to find the starting and ending cue points, marking them down, and then entering them into *Airtime\_Eh*.
 
@@ -144,29 +144,29 @@ In addition, when you play the tracks within Airtime, it will not respect the cu
 
 Simply setup a stream via the Stream settings, and then listen to that stream with the media player of your choice. See the Airtime documentation on setting up multiple streams: http://sourcefabric.booktype.pro/airtime-25-for-broadcasters/stream-settings/
 
-#### 3.3.3.2: Remembering Talking Tracks
+#### 3.3.1.2: Remembering Talking Tracks
 
 Most compendium files delivered will have bits where the content provider (the DJ) is talking. These will have to be marked as well, or they will be omitted when the compendium is saved.
 
-#### 3.3.3.3: Compendiums Are Not Editable
+#### 3.3.1.3: Compendiums Are Not Editable
 
 This is important! Once a compendium is saved in Airtime's *Library*, there is no way to edit the cue points. Airtime does not provide that functionality. You need to be sure that the cue points have been set correctly before saving your compendium.
 
 4: Configuring Wordpress
 ========================
 
-To configure Wordpress for use with our plugin, go into Wordpress' admin screen, and scroll down the side until you see a menu item entitled “Station Feed.”
+To configure Wordpress for use with our plugin, go into Wordpress' admin screen, and scroll down the side until you see a menu item entitled “Station Feed."
 
-<img src="https://github.com/CKGI/airtime-wordpress-plugin/documentation/media/image10.jpg" width="624" height="532" />
+<img src="https://raw.githubusercontent.com/CKGI/airtime-wordpress-plugin/master/documentation/media/image10.jpg" width="624" height="532" />
 
 In *Station Feed*, simply fill in whatever name you'd like to give the station in the *Name* field, and then the URL to the station in the URL field. Please note that this is the URL to the station's Airtime installation, not to their regular website. If in doubt, ask the station what their URL is.
 
-Once you've filled in that information, simply click *Save Station*. The station will now be available as a Wordpress shortcode in the following format: *\[airtime station=”Station Name”\]*. You can put this in any post, page, or sidebar, and it will display a feed of the last 20 shows from that station. You may also add a *shows* variable to the shortcode in order to see more or less shows from that station, like so: *\[airtime station=”Station Name” shows=”65”\]* up to a maximum of 365 shows.
+Once you've filled in that information, simply click *Save Station*. The station will now be available as a Wordpress shortcode in the following format: *\[airtime station="Station Name"\]*. You can put this in any post, page, or sidebar, and it will display a feed of the last 20 shows from that station. You may also add a *shows* variable to the shortcode in order to see more or less shows from that station, like so: *\[airtime station="Station Name" shows="65"\]* up to a maximum of 365 shows.
 
 To remove a station, you can either remove the shortcode from your post or page or sidebar, or click *Remove Station* to remove that station from your available list.
 
 In order to add a new station, simply click *Add Station*, and a new set of entry fields will appear, like so:
 
-<img src="https://github.com/CKGI/airtime-wordpress-plugin/documentation/media/image11.jpg" width="624" height="532" />
+<img src="https://raw.githubusercontent.com/CKGI/airtime-wordpress-plugin/master/documentation/media/image11.jpg" width="624" height="532" />
 
 Fill in the appropriate details as before, and then you'll have two stations to choose from, and so on.
