@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Airtime_Eh Documentation</title>
+		<style>
+a {
+	color: #4169e1;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #4169e1;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #4169e1;
+	text-decoration: underline;
+}
+
+body {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	padding-right: 1em;
+	padding-left: 1em;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+code {
+	font-size: 1em;
+	font-family: Courier, monospace;
+	margin-left: 5em;
+}
+
+div.toc {
+	margin-top: 2em;
+}
+
+div.toc ol {
+	counter-reset: item;
+	margin-bottom: 1em;
+}
+
+div.toc ol > li > ol {
+	margin-top: 1em;
+}
+
+div.toc li {
+	display: block;
+	margin-bottom: 1em;
+}
+
+div.toc li:before {
+	content: counters(item, ".") " - ";
+	counter-increment: item;
+}
+
+h1, h2 {
+	color: #4169e1;
+}
+
+h1.doctitle {
+	font-size: 3em;
+}
+
+ol > li > ol > li {
+	list-style: lower-alpha;
+}
+
+p.picture {
+	text-align: center;
+	width: 100%;
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+.indented {
+	margin-left: 5em;
+}		
+		</style>
+	</head>
+	
+	<body>
+		<h1 class="doctitle"><a id="doctitle">Airtime_Eh Documentation</a></h1>
+		<p class="frontMatter"><strong>Author:</strong> Benjamin Finn <a href="mailto:benjaminzfinn@gmail.com">&lt;benjaminzfinn@gmail.com&gt;</a></p>
+		<p class="frontMatter"><strong>Created:</strong> August 17th, 2015</p>
+		<p class="frontMatter"><strong>Last Revision:</strong> February 26th, 2016</p>
+		<div class="toc">
+			<h1 class="toctitle" id="toc">Table of Contents</h1>
+			<nav epub:type="toc">
+				<ol>
+					<li><a href="#section1">Introduction</a></li>
+					<li><a href="#section2">Installation</a>
+						<ol>
+							<li><a href="#section2.1">Installing <em>Airtime_Eh</em></a></li>
+							<li><a href="#section2.2">Installing <em>Airtime_Eh</em> Wordpress Plugin</a></li>
+						</ol>
+					</li>
+					<li><a href="#section3">Using <em>Airtime_Eh</em></a>
+						<ol>
+							<li><a href="#section3.1">CRTC Metadata</a></li>
+							<li><a href="#section3.2">Configuring <em>Airtime_Eh's</em> Show History Feed</a></li>
+							<li><a href="#section3.3">Using <em>Airtime_Eh's</em> Compendium Functionality</a>
+								<ol>
+									<li><a href="#section3.3.1">Notes on Compendium Usage</a></li>
+								</ol>
+							</li>
+						</ol>
+					</li>
+					<li><a href="#section4">Configuring Wordpress</a></li>
+				</ol>
+			</nav>
+		</div>	
+		<h1><a name="section1" id="section1" href="#top">1: Introduction</a></h1>
+		<p>This document provides an overview and reference source for the functionality of the <em>Airtime_Eh</em> changes to SourceFabric's <em>Airtime</em>.</p>
+		<p>The purpose of the <em>Airtime_Eh</em> project was threefold:
+			<ol>
+				<li><strong>CRTC Metadata:</strong> To provide a metadata field to allow for the entry of CRTC content category numbers in the existing Airtime metadata fields. This will allow Canadian radio stations an easier time adhering to CRTC guidelines.</li>
+				<li><strong>Compendium Management:</strong> As many stations receive their shows in a single compendium file containing many songs, <em>Airtime_Eh</em> provides: 
+					<ol>
+						<li>a way to mark the beginnings and end cues of individual tracks within the compilation</li>
+						<li>a way to add metadata fields for each track within the compilation</li>
+						<li>a way to playback the compilation as a show consisting of many tracks</li>				
+					</ol>
+				</li>
+				<li><strong>Wordpress Integration of Show History:</strong> As many sites may wish to access the history of shows played by one or more stations, and Wordpress is the most common content management system extant, <em>Airtime_Eh</em> provides a Wordpress plugin which can be used to access a public feed of show histories.</li>
+			</ol>
+		</p>
+		<h1><a name="section2" id="section2" href="#top">2: Installation</a></h1>
+		<p>At this time, the <em>Airtime_Eh</em> installation package and Wordpress plugin are available via CKGI's GitHub as installable zip files. It is our hope	that our changes will be accepted by SourceFabric and integrated into the usual release of Airtime.</p>
+		<h2><a name="section2.1" id="section2.1" href="#top">2.1: Installing <em>Airtime_Eh</em></a></h2>
+		<p>To install <em>Airtime_Eh</em>, simply download the package (<a href="https://github.com/CKGI/airtime/archive/2.5.x.zip" target="_blank">https://github.com/CKGI/airtime/archive/2.5.x.zip</a>), unzip it anywhere on your system, drop to
+		a terminal, navigate to the directory where you unzipped <em>Airtime_Eh</em>, and then type:</p>
+		<p><code>sudo ./install.sh</code></p>
+		<p>You will then be in an interactive installation mode. Any installation issues you may encounter should be debugged using SourceFabric's usual documentation - none of the <em>Airtime_Eh</em> modifications will have any impact on installation.</p>
+		<h2><a name="section2.2" id="section2.2" href="#top">2.2: Installing <em>Airtime_Eh</em> Wordpress Plugin</a></h2>
+		<p>	To install <em>Airtime_Eh's</em> Wordpress plugin, download this package (<a href="https://github.com/CKGI/airtime-wordpress-plugin/archive/master.zip" target="_blank">https://github.com/CKGI/airtime-wordpress-plugin/archive/master.zip</a>). Login as an administrator to your Wordpress site. Go to <em>Plugins</em>. On the screen that brings up, click on the <em>Upload Plugin</em> link, and follow the instructions.</p>
+		<p>Once it is uploaded, you may activate the plugin. See <a href="section4.html">Section 4</a>, "Configuring Wordpress," for more information on configuring the plug post-activation.</p>
+		<h1><a name="section3" id="section3" href="#top">3: Using <em>Airtime_Eh</em></a></h1>
+		<p><em>Airtime_Eh</em> is, in most ways, a typical Airtime installation. Airtime can be used normally, in accordance to SourceFabric's documentation. However, there are additional features provided by <em>Airtime_Eh</em> which are detailed below.</p>
+		<h2><a name="section3.1" id="section3.1" href="#top">3.1: CRTC Metadata</a></h2>
+		<p>Entering CRTC content category numbers is quite simple. Airtime provides the ability to edit track metadata in the <em>Library</em> section of Airtime. To access it, login to your <em>Airtime_Eh</em> installation, go to the <em>Library </em>pane pictured below.</p>
+		<p class="picture"><img src="https://raw.githubusercontent.com/CKGI/airtime-wordpress-plugin/master/documentation/media/image1.jpg" alt="Airtime Library Screenshot"></img></p>
+		<p>Next, left click on the track whose metadata you wish to edit. A menu will come up. Click on <em>Edit Metadata</em>.</p>
+		<p class="picture"><img src="https://raw.githubusercontent.com/CKGI/airtime-wordpress-plugin/master/documentation/media/image2.jpg" alt="Edit Metadata Screenshot"></img></p>		
+		<p>In the fields which come up, the last will read <em>CRTC</em>. In that field, enter the CRTC content category or categories of the track, in accordance with CRTC regulations (<a href="http://www.crtc.gc.ca/eng/archive/2000/PB2000-14.htm" target="_blank">http://www.crtc.gc.ca/eng/archive/2000/PB2000-14.htm</a>).</p>
+		<p>Multiple content categories should be entered with a space between them, e.g. 1 11 13.</p>
+		<p class="picture"><img src="https://raw.githubusercontent.com/CKGI/airtime-wordpress-plugin/master/documentation/media/image3.jpg" alt="CRTC Codes Screenshot"></img></p>				
+		<p>When you have entered the content categories, simply click the <em>Save</em> button, and the content categories will be stored.</p>
+		<h2><a name="section3.2" id="section3.2" href="#top">3.2: Configuring <em>Airtime_Eh's</em> Show History Feed</a></h2>
+		<p>This is referring to the Airtime side of the equation. To learn more about configuring the Wordpress side, see Section 4, below. This section discusses enabling the show history feed which is consumed by our Wordpress plugin.</p>
+		<p>Airtime provides the ability for stations to deliver publicly accessible feeds of information relating to their content and status. These feeds are delivered as JSON documents - bits of text designed to be consumed by other applications in the Javascript Object Notation format, aka JSON.</p>
+		<p>Please note that although <em>Airtime_Eh</em> only provides a Wordpress plugin to interpret the show history feed, this data can be interpreted in applications by any competent programmer.</p>
+		<p><em>Airtime_Eh</em>integrates a show history feed into the pre-existing publicly accessible feeds already provided by Airtime. As such, the show history feed is enabled exactly like the other publicly accessible feeds. For more information on the usual information provided by Airtime's public feeds, see here:</p>
+		<p><a class="indented" href="http://sourcefabric.booktype.pro/airtime-25-for-broadcasters/exporting-the-schedule/" target="_blank">http://sourcefabric.booktype.pro/airtime-25-for-broadcasters/exporting-the-schedule/</a></p>
+		<p>	To enable the show history feed, login to your <em>Airtime_Eh</em> installation. Go to <em>Preferences</em>.
+		</p>
+		<p class="picture"><img src="https://raw.githubusercontent.com/CKGI/airtime-wordpress-plugin/master/documentation/media/image4.jpg" alt="Preferences Screenshot"></img></p>						
+		<p>In <em>Preferences</em>, go to <em>Public Airtime API</em>. Click on <em>Enabled</em>. Then go to the bottom of the screen and click <em>Save.</em></p>
+		<p class="picture"><img src="https://raw.githubusercontent.com/CKGI/airtime-wordpress-plugin/master/documentation/media/image5.jpg" alt="Preferences Screenshot"></img></p>								
+		<p>Click <em>Save</em>. Now your station provides the usual gamut of publicly available Airtime feeds, including the show history feed.</p>
+		<p>The show history feed is accessed from a link like this, where you'd replace <em>www.yourairtimeinstallation.com </em>with the address of the <em>Airtime_Eh</em> installation whose feed you wish to access:</p>
+		<p><code>http://www.yourairtimeinstallation.com/api/showhistory</code></p>
+		<p>You may add a configuration variable to that link, like so:</p>
+		<p><code>http://www.yourairtimeinstallation.com/api/showhistory?shows=65</code></p>
+		<p>This will determine the numbers of shows whose metadata will be delivered. The default is 20 shows; the maximum is 365. This link is what will be entered into your Wordpress plugin's configuration later on, so it's important to note it.</p>
+		<p>The metadata returned will include the host of the show; the URL of the show; the genre of the show; the description of the show; and a detailed listing of each track played, including starting and ending time of the track, track title, album name, artist name, genre, year of publication, and the track number of the track on its album.</p>
+		<p>Please note that some of these fields are optional. The only data guaranteed to be received is the host; each track's starting and time; and a track title.</p>
+		<h2><a name="section3.3" id="section3.3" href="#top">3.3: Using <em>Airtime_Eh's</em> Compendium Functionality</a></h2>
+		<p><em>Airtime_Eh</em> adds a new feature to the editing fields in Airtime's <em>Library</em> section, titled <em>Create Compendium</em>.</p>
+		<p class="picture"><img src="https://raw.githubusercontent.com/CKGI/airtime-wordpress-plugin/master/documentation/media/image6.jpg" alt="Create Compendium Screenshot"></img></p>								
+		<p>A compendium file is one where several tracks have been provided to your station as one single file. The purpose of <em>Create Compendium</em> is to set	<strong>cue points<em> </em></strong>in the metadata, so Airtime treats each cue point as the beginning and end of a given track. A cue point is simply a timestamp of the beginning and end of a track.</p>
+		<p>When you click <em>Create Compendium</em>, a window will pop up.</p>
+		<p class="picture"><img src="https://raw.githubusercontent.com/CKGI/airtime-wordpress-plugin/master/documentation/media/image7.jpg" alt="Create Compendium Screenshot"></img></p>
+		<p>In this window, you will see <em>Track 1</em>, and the buttons <em>Add Track</em> and <em>Save Compendium</em>. <em>Track 1</em> has a clickable title. Click it to show or hide the metadata fields for that entry.</p>
+		<p class="picture"><img src="https://raw.githubusercontent.com/CKGI/airtime-wordpress-plugin/master/documentation/media/image8.jpg" alt="Create Compendium Screenshot"></img></p>		
+		<p>As you can see, each track has the usual metadata fields, but also has a <em>Starts</em> and <em>Ends</em> field, which represent the starting and ending cue points for this track. These fields expect a numeric entry, in the form of Minute.Seconds (e.g. <em>3.04 </em>would be three minutes and four seconds). It is important to enter two digits in the second part of the field. If you entered <em>3.4</em>, for example, you would be telling the compendium to set a cue point at three minutes and forty seconds, not three minutes and four seconds.</p>
+		<p>To add further tracks in the compendium, simply click on <em>Add Track</em>. Another track entry will appear.	</p>
+		<p class="picture"><img src="https://raw.githubusercontent.com/CKGI/airtime-wordpress-plugin/master/documentation/media/image8.jpg" alt="Create Compendium Screenshot"></img></p>		
+		<p>If you wish to remove a track from the compendium, simply click the <em>Cancel</em> button in that track's listing. The offending track will be removed, and the rest will be appropriately re-numbered.</p>
+		<p>Please note that each track will appear with the metadata revealed for editing. You can click on the title to hide an entry. This will have no effect on the data in that entry, it's simply a convenience for when you have an especially long list of compendium tracks to manage.</p>
+		<p>When you are finished with your tracks, click <em>Save Compendium</em>. The compendium will now appear in your library as a list of tracks which can be sorted into a playlist.</p>
+		<h3><a name="section3.3.1" id="section3.3.1" href="#top">3.3.1: Notes on Compendium Usage</a></h3>
+		<p>Compendiums are an advanced Airtime feature. There are a few tricks to using them properly.</p>
+		<h4><a name="section3.3.1.1" id="section3.3.1.1" href="#top">3.3.1.1: Using a Media Player</a></h4>		
+		<p>Airtime's built-in media player is quite limited. As such, it was not feasible to put a media player in the compendium functionality. As such, we advise using a separate media player (i.e. Winamp, VLC, etc.) to find the starting and ending cue points, marking them down, and then entering them into	<em>Airtime_Eh</em>.</p>
+		<p>In addition, when you play the tracks within Airtime, it will not respect the cue points, due to inherent limitations in their built-in media player. To preview a compendium show, you will have to cue it up and play it as a private show.</p>
+		<p>Simply setup a stream via the Stream settings, and then listen to that stream with the media player of your choice. See the Airtime documentation on setting up multiple streams: <a href="http://sourcefabric.booktype.pro/airtime-25-for-broadcasters/stream-settings/" target="_blank">http://sourcefabric.booktype.pro/airtime-25-for-broadcasters/stream-settings/</a></p>
+		<h4><a name="section3.3.1.2" id="section3.3.1.2" href="#top">3.3.1.2: Remembering Talking Tracks</a></h4>
+		<p>Most compendium files delivered will have bits where the content provider (the DJ) is talking. These will have to be marked as well, or they will be omitted when the compendium is saved.</p>
+		<h4><a name="section3.3.1.2" id="section3.3.1.3" href="#top">3.3.1.3: Compendiums Are Not Editable</a></h4>
+		<p>This is important! Once a compendium is saved in Airtime's <em>Library</em>, there is no way to edit the cue points. Airtime does not provide that functionality. You need to be sure that the cue points have been set correctly before saving your compendium.</p>
+		<h1><a name="section4" id="section4" href="#top">4: Configuring Wordpress</a></h1>
+		<p>To configure Wordpress for use with our plugin, go into Wordpress' admin screen, and scroll down the side until you see a menu item entitled "Station Feed."</p>
+		<p class="picture"><img src="https://raw.githubusercontent.com/CKGI/airtime-wordpress-plugin/master/documentation/media/image10.jpg" alt="Wordpress Screenshot"></img></p>
+		<p>In <em>Station Feed</em>, simply fill in whatever name you'd like to give the station in the <em>Name</em> field, and then the URL to the station in the URL field. Please note that this is the URL to the station's Airtime installation, not to their regular website. If in doubt, ask the station what their	URL is.</p>
+		<p>Once you've filled in that information, simply click <em>Save Station</em>. The station will now be available as a Wordpress shortcode in the following format: <em>[airtime station="Station Name"]</em>. You can put this in any post, page, or sidebar, and it will display a feed of the last 20 shows from that station. You may also add a <em>shows</em> variable to the shortcode in order to see more or less shows from that station, like so: <em>[airtime station="Station Name" shows="65"]</em> up to a maximum of 365 shows.</p>
+		<p>To remove a station, you can either remove the shortcode from your post or page or sidebar, or click <em>Remove Station </em>to remove that station from your available list.</p>
+		<p>In order to add a new station, simply click <em>Add Station</em>, and a new set of entry fields will appear, like so:</p>
+		<p class="picture"><img src="https://raw.githubusercontent.com/CKGI/airtime-wordpress-plugin/master/documentation/media/image11.jpg" alt="Wordpress Screenshot"></img></p>		
+		<p>Fill in the appropriate details as before, and then you'll have two stations to choose from, and so on.</p>
+	</body>
+</html>
+
